@@ -12,17 +12,16 @@ while True:
     print("")
     user_choice = input("Your Choice (Rock, Paper or Scissors): ")
     computer_choice = random.choice(option)
-
+    print("")
     # Display Choices
     print("================= Moves =====================")
     print("Your Choice:",user_choice)
     print("Computer Choice:",computer_choice)
-    print("")
 
     # Draw
     if user_choice == computer_choice:
         print("============= Results ================")
-        print("You WINNNNN!!!!")
+        print("DRAW!!!!")
         
     # Choices that makes the user win
     elif user_choice == "Paper" and computer_choice == "Rock":
@@ -44,26 +43,22 @@ while True:
         print("============= Results ================")
         print("COMPUTER WINNNN!!!")
         computer = computer + 1
-        
+
+    print("========== Scores ================")
+    print("Your Points:", user) 
+    print("Computer's Points:", computer)
+
 # Conditions for Score Comparisons
-    if user < computer:
-        print("")
-        print("============ Scores ============")
-        print("Your Points:", user) 
-        print("Computer's Points:", computer)
-        print("COMPUTER WINS!")
-    elif user == computer:
-        print("")
-        print("=========== Scores =============")
-        print("Your Points:", user)
-        print("Computer's Points:", computer)
-        print("DRAW!!", )
-    else:
-        print("")
-        print("=========== Scores =============")
-        print("Your Points:", user,)
-        print("Computer's Points:", computer)
-    
+    if user == 3 or computer == 3:
+        if user < computer:
+            print("")
+            print("COMPUTER WINS THE GAME")
+        elif user == computer:
+            print("")
+            print("THE GAME END IN A DRAW")
+        else:
+            print("")
+            print("YOU WON THE GAME")
 # Stopping the loop after the max score is reached
     if user == 3 or computer == 3:
         break
