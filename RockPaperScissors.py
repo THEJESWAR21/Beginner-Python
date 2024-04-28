@@ -9,49 +9,61 @@ computer = 0
 while True:
 
     # Inputs
+    print("")
     user_choice = input("Your Choice (Rock, Paper or Scissors): ")
     computer_choice = random.choice(option)
 
     # Display Choices
+    print("================= Moves =====================")
     print("Your Choice:",user_choice)
     print("Computer Choice:",computer_choice)
+    print("")
 
     # Draw
     if user_choice == computer_choice:
-        print("DRAW!!!")
-        result="Draw"
-
+        print("============= Results ================")
+        print("You WINNNNN!!!!")
+        
     # Choices that makes the user win
     elif user_choice == "Paper" and computer_choice == "Rock":
-        print("YOU WIN!!!")
-        result="User_Wins"
+        print("============= Results ================")
+        print("You WINNNNN!!!!")
         user = user + 1
     elif user_choice == "Scissors" and computer_choice == "Paper":
-        print("YOU WIN!!")
-        result="User_Wins"
+        print("============= Results ================")
+        print("You WINNNNN!!!!")
         user = user + 1
     elif user_choice == "Rock" and computer_choice == "Scissors":
-        print("YOU WIN!!",)
-        result="User_Wins"
+        print("============= Results ================")
+        print("You WINNNNN!!!!")
         user = user + 1
-
+    
+    # Choices
     else:
-        print("COMPUTER WINS!")
-        result=("Computer_Wins")
+        print("")
+        print("============= Results ================")
+        print("COMPUTER WINNNN!!!")
         computer = computer + 1
         
+# Conditions for Score Comparisons
     if user < computer:
-        print("Your Points", user) 
-        print("Computer's Points", computer)
+        print("")
+        print("============ Scores ============")
+        print("Your Points:", user) 
+        print("Computer's Points:", computer)
         print("COMPUTER WINS!")
     elif user == computer:
-        print("Your Points", user)
-        print("Computer's Points", computer)
+        print("")
+        print("=========== Scores =============")
+        print("Your Points:", user)
+        print("Computer's Points:", computer)
         print("DRAW!!", )
     else:
-        print("Your Points", user,)
-        print("Computer's Points", computer)
-        print("YOU WINS!") 
+        print("")
+        print("=========== Scores =============")
+        print("Your Points:", user,)
+        print("Computer's Points:", computer)
     
+# Stopping the loop after the max score is reached
     if user == 3 or computer == 3:
         break
