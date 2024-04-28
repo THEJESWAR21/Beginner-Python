@@ -53,7 +53,3 @@ while True:
     else:
         print("Invalid Input")
 
-# Learn
-#   - Error & Exceptions
-#   - Continue and breck
-#   - Returns with functions
