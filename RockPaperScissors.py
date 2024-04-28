@@ -1,24 +1,30 @@
-import random
+import random 
 
-choices = ["Rock","Paper","Scissors"]
+option = ["Rock","Paper","Scissors"]
 
-p1 = input("Pick an option (Rock, Paper, Scissors): ")
-p2 = random.choice(choices)
+user_choice = input("Your Choice (Rock, Paper or Scissors): ")
+computer_choice = random.choice(option)
 
+print("Your Choice:",user_choice)
+print("Computer Choice:",computer_choice)
 
-while True:
-    if p1 == "Rock":
-        if p2 == choices[0]:
-            print("Draw",end="")
-            result="Draw"
-        elif p2 == choices[1]:
-            print("AI Wins!!",end="")
-            result="AI"
-        elif p2 == choices[2]:
-            print("User Wins!!")
-            result="User"
-    else:
-        print("Didn't code it yet")
-        continue
+user = 0
+computer = 0
 
+if user_choice == computer_choice:
+    print("DRAW!!!",end="")
+    result="Draw"
+elif user_choice == "Paper" and computer_choice == "Rock":
+    print("YOU WIN!!!",end="")
+    result="User_Wins"
+elif user_choice == "Scissors" and computer_choice == "Paper":
+    print("YOU WIN!!",end="")
+    result="User_Wins"
+elif user_choice == "Rock" and computer_choice == "Scissors":
+    print("YOU WIN!!",end="")
+    result="User_Wins"
+
+else:
+    print("COMPUTER WINS!")
+    result=("Computer_Wins")
 
