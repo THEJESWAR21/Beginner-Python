@@ -2,7 +2,6 @@ import random
 
 # Lists
 option = ["Rock","Paper","Scissors"]
-
 # Scores
 user = 0
 computer = 0
@@ -16,8 +15,6 @@ while True:
     ## Randomly Picks an option from the list
     computer_choice = random.choice(option)
     print("")
-
-
     # Display Choices
     print("================= Moves =====================")
     print("Your Choice:",user_choice)
@@ -27,7 +24,7 @@ while True:
     if user_choice == computer_choice:
         print("============= Results ================")
         print("DRAW!!!!")
-        
+
     # Choices that makes the user win
     elif user_choice == "Paper" and computer_choice == "Rock":
         print("============= Results ================")
@@ -42,6 +39,7 @@ while True:
         print("You WINNNNN!!!!")
         user = user + 1
     
+    elif user_choice == "Rock"
     # Choices
     else:
         print("")

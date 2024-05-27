@@ -28,6 +28,7 @@ while True:
             num_1 = float(input("Enter Number 1: "))
             num_2 = float(input("Enter Number 2: "))
         except ValueError:
+
             print("Invalid Input")
             continue
 
