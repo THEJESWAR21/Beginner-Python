@@ -17,6 +17,7 @@ while True:
         password +=''.join(secrets.choice(selection_list))
         i = i + 1
     # CUSTOMIZING THE GENERATED CODE
+    
     # if any(char in ascii_letters for char in password) and sum(char in digits for char in password) == 2 and i == password_len:
     #     print(password)
     #     break
