@@ -38,7 +38,7 @@ while True:
 
         # Subtract
         elif (x == "2"):
-            print(num_1, "-", num_2, "=", substract(num_1,num_2))
+            print(num_1, "-", num_2, "=", subtract(num_1,num_2))
             
         # Multiply
         elif (x == "3"):
